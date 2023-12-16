@@ -1,0 +1,116 @@
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Apply the animation to the image */
+.rotate {
+    animation: rotateAnimation 2ms linear infinite; /* Rotate for 4 seconds in a linear fashion, infinitely */
+}
+.Matura-MT {
+    font-family: 'Matura MT';
+    color: rgb(123, 68, 200);
+    font-size: 30px;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('https://img.freepik.com/premium-vector/modern-white-grey-geometric-background-seamless-pattern_322978-705.jpg');
+    background-size: cover;
+}
+
+.centered-content {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color:rgb(43, 0, 255);
+    font-variant: initial;
+    font-weight: 500; 
+}
+.centered-video iframe {
+    display: block;
+    margin: 0 auto;
+
+}
+/* Anchor style */
+.anchor-link {
+    text-decoration-color: rgb(10, 10, 10);
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+.anchor-link a {
+    color: darkblue; /* Set text color to dark blue */
+    /* Additional styles */
+    text-decoration: underline; /* Keep the underline */
+    font-size: 30px;
+    font-weight: bold;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Styling for the arrow */
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #000; /* Adjust the color as needed */
+    margin-left: 80px; /* Increase the margin to move the arrow to the right */
+    animation: bounce 1s infinite; /* Apply the bounce animation */
+}
+.ending {
+    height: 100px;
+    background-color: red;
+    /* ...other styles... */
+}
+
+/* CSS for the ending text */
+.ending-text {
+    background-color: red;
+    height: 30px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+}
+  /* Keyframes for the walking animation */
+  @keyframes walk {
+    0% {
+      transform: translateX(-20px); /* Start off-screen to the left */
+    }
+    100% {
+      transform: translateX(calc(100vw + 20px)); /* Move to the right edge of the screen */
+    }
+  }
+  /* Styling for the red bar */
+  red-bar {
+    background-color: red;
+    height: 100px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+  }
+  .link-to-page {
+    font-size: 25px;
+    color: blue;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+  .chart-description {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+
+}
+  

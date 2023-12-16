@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="https://porterballard.github.io/porterballard/" class="link-to-page">CLICK HERE TO GO TO MY BOOTSTRAP WEBSITE</a>
+    <title>My Wife</title>
+    <link rel="stylesheet" href="css/newstyles.css">
+    
+   
+</head>
+<body>
+    <h1>My Wife</h1>
+    <p>I am making this page to highlight my wife to show how amazing she is.</p>
+    
+    <h3>Here are the things that will be shown on this webpage:</h3>
+    <ol> <!-- Ordered List -->
+        <li>An image of my wife and I.</li>
+        <li>A Youtube video</li>
+        <li>A fun little Tableau graph without much correlation to the topic. 
+            <ul> <!-- Unordered List embedded within an ordered list -->
+                <li>It will be about the Fifa World Cup</li>
+                <li>It is a big chart, so have fun scrolling through it looking at the cool facts.</li>
+            </ul>
+        </li>
+        <li>A moving sitck figure(it's pretty cool)</li>
+    <style>
+        .Matura-MT {
+            font-family: 'Matura MT', cursive;
+        }
+    </style>
+</head>
+<body>
+</body>
+    <h2 class="Matura-MT">An image of my wife and I will be shown below</h2>
+    <p>Below is a photo of one of our favorite pictures:</p>
+
+    <h5 id="bounce">(Click the image for a surprise) 
+        <br><br><br>
+        <span class="arrow-down"></span>
+    </h5> 
+    
+        
+        <img src="images/favorite.jpg" alt="Image of my wife and I" width="200" id="rotatingImage">
+    <script>
+    
+        document.getElementById("rotatingImage").addEventListener("click", function() {
+            this.classList.toggle("rotate");
+        });
+    </script>
+
+    <!-- Text before video -->
+    <div class="centered-content">
+        <h4>I would put a video of Jenna and me here, but unfortunately, we have no YouTube videos together, so here is a video of me.</h4>
+        
+        <!-- Embedding YouTube Video -->
+        <div class="centered-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zKOahxmugmA?si=T5JrQ0Gnu1XHBPLs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+    <p class="chart-description">Here is a tableau chart about the FIFA World Cup history. Enjoy!</p>
+ 
+
+<body>
+    
+</body>
+    </style>
+
+    <div class='tableauPlaceholder' id='viz1702686879407' style='position: relative'><noscript><a href='#'><img alt='FIFA World Cup ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;FI&#47;FIFAWorldCup_9&#47;FIFAWorldCup&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  
+        style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FIFAWorldCup_9&#47;FIFAWorldCup' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;FI&#47;FIFAWorldCup_9&#47;FIFAWorldCup&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1702686879407');                    var vizElement = divElement.getElementsByTagName('object')[0];                   
+         vizElement.style.width='1000px';vizElement.style.height='500px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+<body>
+
+    <h4>I decided that I wanted to make a stick figure move across the colored plain I have made. Look below</h4>
+    
+    
+    
+    <style>
+        /* Styling for the red bar */
+        .red-bar {
+          background-color: rgb(0, 234, 255);
+          height: 100px; /* Adjust height as needed */
+          position: relative;
+          overflow: hidden;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="red-bar">
+        <canvas id="stick-figure-canvas" width="800" height="100"></canvas>
+      </div>
+    
+      <script>
+        const canvas = document.getElementById('stick-figure-canvas');
+        const ctx = canvas.getContext('2d');
+    
+        let xPosition = -100; // Initial position of the stick figure
+    
+        // Function to draw the stick figure
+        function drawStickFigure(x) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+    
+          // Head
+          ctx.beginPath();
+          ctx.arc(x + 40, 30, 10, 0, Math.PI * 2);
+          ctx.fill();
+    
+          // Body
+          ctx.moveTo(x + 40, 40);
+          ctx.lineTo(x + 40, 80);
+    
+          // Arms
+          ctx.moveTo(x + 40, 50);
+          ctx.lineTo(x + 70, 60);
+          ctx.moveTo(x + 40, 50);
+          ctx.lineTo(x + 10, 60);
+    
+          // Legs
+          ctx.moveTo(x + 40, 80);
+          ctx.lineTo(x + 70, 100);
+          ctx.moveTo(x + 40, 80);
+          ctx.lineTo(x + 10, 100);
+    
+          ctx.stroke();
+        }
+    
+        // Function to animate the stick figure
+        function animate() {
+          requestAnimationFrame(animate);
+          drawStickFigure(xPosition);
+          xPosition += 1; // Adjust speed by changing this value
+          if (xPosition > canvas.width + 100) {
+            xPosition = -100; // Reset position to restart animation
+          }
+        }
+    
+        animate(); // Start the animation
+      </script>
+    </body>
+
+
+</body>
+<div class="Matura-MT"
+<p>Even though in the end it really didn't end up being about my wife, I still love her and would for sure make a website about her another time, maybe at a time where putting a tableau chart isn't part of it. It's a bit hard to have a tableau chart relate to my wife. Anyway, I hope you enjoyed this fun little website of mine.</p>
+
+
+<div class="anchor-link">
+    <a href="#">Back to top </a>
+</div>
+</html>
